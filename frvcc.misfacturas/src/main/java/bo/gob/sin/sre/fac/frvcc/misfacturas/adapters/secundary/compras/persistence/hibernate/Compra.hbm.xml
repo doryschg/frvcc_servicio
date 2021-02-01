@@ -1,0 +1,148 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.Compra" schema="sfe_facturacion" table="tsfe_cv_compras">
+        <composite-id name="id" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraId" access="field">
+            <key-property column="seq_compra_vc"  name="value" length="36" access="field" />
+        </composite-id>
+
+        <component name="recepcionId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraRecepcionId" access="field">
+            <property name="value" column="seq_recepcion_vc" type="string" access="field" />
+        </component>
+        
+        <component name="secuencia" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraSecuencia" access="field">
+            <property name="value" column="secuencia_nb" type="java.lang.Long" access="field" />
+        </component>
+        
+        <component name="tipoDocumentoId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraTipoDocumentoId" access="field">
+            <property name="value" length="36" column="tipo_documento_id_vc" type="string" access="field" />
+        </component>
+
+        <component name="fechaFactura" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraFechaFactura" access="field">
+            <property name="value" column="fecha_factura_dt" type="java.time.LocalDate" access="field" />
+        </component>
+        
+        <component name="ifcProveedorNb" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraIfcProveedorNb" access="field">
+            <property name="value" column="ifc_proveedor_nb" type="java.lang.Long" access="field" />
+        </component>
+
+        <component name="nitProveedor" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraNitProveedor" access="field">
+            <property name="value" column="nit_proveedor_nb" type="java.lang.Long" access="field" />
+        </component>
+
+        <component name="razonSocialProveedor" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraRazonSocialProveedor" access="field">
+            <property name="value" column="razon_social_proveedor_vc" type="string" access="field" />
+        </component>
+        <component name="numeroFactura" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraNumeroFactura" access="field">
+            <property name="value" column="nro_factura_nb" type="java.lang.Long" access="field" />
+        </component>
+        <component name="numeroDui" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraNumeroDui" access="field">
+            <property name="value" column="nro_dui_vc" type="java.lang.String" access="field" />
+        </component>
+        <component name="codigoAutorizacion" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraCodigoAutorizacion" access="field">
+            <property name="value" column="cod_autorizacion_vc" type="java.lang.String" access="field" />
+        </component>
+        <component name="importeTotalCompra" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraImporteTotalCompra" access="field">
+            <property name="value" column="importe_total_compra_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        <component name="importeNoSujetoCf" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraImporteNoSujetoCf" access="field">
+            <property name="value" column="importe_no_sujeto_cf_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        <component name="subtotal" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraSubtotal" access="field">
+            <property name="value" column="subtotal_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        <component name="descuento" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraDescuento" access="field">
+            <property name="value" column="descuento_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        <component name="importeBaseCf" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraImporteBaseCf" access="field">
+            <property name="value" column="importe_base_cf_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        <component name="creditoFiscal" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraCreditoFiscal" access="field">
+            <property name="value" column="credito_fiscal_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        <component name="codigoControl" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraCodigoControl" access="field">
+            <property name="value" column="codigo_control_vc" type="java.lang.String" access="field" />
+        </component>
+        <component name="tipoSectorId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraTipoSectorId" access="field">
+            <property name="value" column="tipo_sector_id_nb" type="integer" access="field" />
+        </component>
+        <component name="modalidadId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraModalidadId" access="field">
+            <property name="value" column="modalidad_id_vc" type="java.lang.String" access="field" />
+        </component>
+        <component name="estadoCompraId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraEstadoCompraId" access="field">
+            <property name="value" column="estado_compra_id_vc" type="string" access="field" />
+        </component>
+        <component name="estadoUsoId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraEstadoUsoId" access="field">
+            <property name="value" column="estado_uso_id_vc" type="java.lang.String" access="field" />
+        </component>
+        <component name="impuestoUsoId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraImpuestoUsoId" access="field">
+            <property name="value" column="impuesto_uso_id_vc" type="java.lang.String" access="field" />
+        </component>
+		<component name="gestionUso" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraGestionUso" access="field">
+            <property name="value" column="gestion_uso_nb" type="integer" access="field" />
+        </component>
+        <component name="periodoUso" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraPeriodoUso" access="field">
+            <property name="value" column="periodo_uso_nb" type="integer" access="field" />
+        </component>
+       <component name="nombreFormularioUso" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraNombreFormularioUso" access="field">
+            <property name="value" column="nombre_formulario_uso_vc" type="java.lang.String" access="field" />
+        </component>
+        <component name="formularioId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraFormularioId" access="field">
+            <property name="value" column="seq_formulario_vc" type="java.lang.String" access="field" />
+        </component>
+        <component name="libroId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraLibroId" access="field">
+            <property name="value" column="seq_libro_vc" type="java.lang.String" access="field" />
+        </component>
+        <component name="ventaId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraVentaId" access="field">
+            <property name="value" column="seq_venta_vc" type="java.lang.String" access="field" />
+        </component>
+        <component name="usuarioRegistro" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraUsuarioRegistro" access="field">
+            <property name="value" column="usuario_registro_nb" type="java.lang.Long" access="field" />
+        </component>
+        <component name="fechaRegistro" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraFechaRegistro" access="field">
+            <property name="value" column="fecha_registro_ts" type="java.time.LocalDateTime" access="field" />
+        </component>
+        <component name="usuarioUltimaModificacion" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraUsuarioUltimaModificacion" access="field">
+            <property name="value" column="usuario_ultima_modificacion_nb" type="java.lang.Long" access="field" />
+        </component>
+        <component name="fechaUltimaModificacion" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraFechaUltimaModificacion" access="field">
+            <property name="value" column="fecha_ultima_modificacion_ts" type="java.time.LocalDateTime" access="field" />
+        </component>
+        <component name="estadoId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraEstadoId" access="field">
+            <property name="value" column="estado_id_vc" type="java.lang.String" access="field" />
+        </component>
+
+        <component name="tipoDocumentoCliente" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraTipoDocumentoCliente" access="field">
+            <property name="value" column="tipo_doc_cliente_id_vc" type="java.lang.String" access="field" />
+        </component>
+        <component name="numeroDocumentoCliente" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraNumeroDocumentoCliente" access="field">
+            <property name="value" column="nro_doc_cliente_vc" type="java.lang.String" access="field" />
+        </component>
+        <component name="complementoDocumentoCliente" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraComplementoDocumentoCliente" access="field">
+            <property name="value" column="complemento_doc_cliente_vc" type="java.lang.String" access="field" />
+        </component>
+        
+        <component name="nombreCliente" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraNombreCliente" access="field">
+            <property name="value" column="nombre_cliente_vc" type="java.lang.String" access="field" />
+        </component>
+        <component name="origenId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraOrigenId" access="field">
+            <property name="value" column="origen_id_vc" type="java.lang.String" access="field" />
+        </component>
+        <component name="conDerechoCf" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraConDerechoCf" access="field">
+            <property name="value" column="con_derecho_cf_vc" type="java.lang.String" access="field" />
+        </component>
+        <component name="tipoCompraId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraTipoCompraId" access="field">
+            <property name="value" column="tipo_compra_id_vc" type="java.lang.String" access="field" />
+        </component>
+        <component name="tipoObservacionId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraTipoObservacionId" access="field">
+            <property name="value" column="tipo_observacion_id_vc" type="java.lang.String" access="field" />
+        </component>
+        <component name="marcaEspecialId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraMarcaEspecialId" access="field">
+            <property name="value" column="marca_especial_id_vc" type="java.lang.String" access="field" />
+        </component>
+
+    </class>
+</hibernate-mapping>

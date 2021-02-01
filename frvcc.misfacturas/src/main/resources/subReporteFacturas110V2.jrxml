@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subReporteFacturas110V2" pageWidth="752" pageHeight="572" orientation="Landscape" whenNoDataType="NoPages" columnWidth="752" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="df7b4433-1b0f-4bd4-82fd-7e4ad3119cf5">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="base" fontName="Tahoma" fontSize="7"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="codigoControl" class="java.lang.String">
+		<fieldDescription><![CDATA[codigoControl]]></fieldDescription>
+	</field>
+	<field name="codigoAutorizacion" class="java.lang.String">
+		<fieldDescription><![CDATA[codigoAutorizacion]]></fieldDescription>
+	</field>
+	<field name="nitProveedor" class="java.lang.Long">
+		<fieldDescription><![CDATA[nitProveedor]]></fieldDescription>
+	</field>
+	<field name="fechaFacturaCadena" class="java.lang.String">
+		<fieldDescription><![CDATA[fechaFacturaCadena]]></fieldDescription>
+	</field>
+	<field name="numeroFactura" class="java.lang.Long">
+		<fieldDescription><![CDATA[numeroFactura]]></fieldDescription>
+	</field>
+	<field name="importeTotalCompra" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[importeTotalCompra]]></fieldDescription>
+	</field>
+	<field name="marcaEspecialId" class="java.lang.String">
+		<fieldDescription><![CDATA[marcaEspecialId]]></fieldDescription>
+	</field>
+	<variable name="variableNumero" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$V{variableNumero}==0?$V{variableNumero}+1:2]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<detail>
+		<band height="19" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="18" width="572" height="1" uuid="2536e141-4cc4-4905-9113-945dc92f980e"/>
+				<graphicElement>
+					<pen lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="32" y="0" width="1" height="18" isRemoveLineWhenBlank="true" uuid="e4cf25b3-0839-4ed3-bf37-673f8c3324c1"/>
+				<graphicElement>
+					<pen lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="97" y="0" width="1" height="19" uuid="b8cb2990-b0b9-4a0f-91dd-06bad0128651"/>
+				<graphicElement>
+					<pen lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="176" y="0" width="1" height="18" isRemoveLineWhenBlank="true" uuid="d3c483e1-5b03-456a-90aa-057c94a96f03"/>
+				<graphicElement>
+					<pen lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="306" y="0" width="1" height="18" uuid="0e17353b-735b-4153-a2f3-aa01ec54f0ba"/>
+				<graphicElement>
+					<pen lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="370" y="0" width="1" height="18" isPrintInFirstWholeBand="true" uuid="d19882d9-6ef7-436f-9111-9b7d563fbf2e"/>
+				<graphicElement>
+					<pen lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="443" y="0" width="1" height="18" isRemoveLineWhenBlank="true" uuid="554e3d32-ff1a-41ec-99d7-28a7a86cf1c2"/>
+				<graphicElement>
+					<pen lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="571" y="0" width="1" height="18" isRemoveLineWhenBlank="true" uuid="9be447d5-f7c5-4bb2-b220-de204d65b3be"/>
+				<graphicElement>
+					<pen lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="18" uuid="c4ab7fe1-f664-48bc-b140-5da6db74e059"/>
+				<graphicElement>
+					<pen lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="base" x="33" y="0" width="62" height="18" uuid="89bf3447-0a1c-4f10-bec1-75f2d4034c43"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nitProveedor}==null?"0":$F{nitProveedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="base" x="101" y="0" width="73" height="18" uuid="7409e92e-c521-4eeb-a18f-858425c15f29"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numeroFactura}==null?"0":$F{numeroFactura}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="base" x="179" y="0" width="125" height="18" uuid="9b4eabae-5da0-460b-bdd6-b6a79a8d2046"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoAutorizacion}==null?"0":$F{codigoAutorizacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="base" x="308" y="0" width="61" height="18" uuid="1a94d314-8acc-468b-b929-d01962712454">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaFacturaCadena}==null?"":$F{fechaFacturaCadena}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0" isBlankWhenNull="true">
+				<reportElement style="base" x="371" y="0" width="69" height="18" uuid="ed72f89f-3a44-44bf-9b91-0de7d07f860f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{importeTotalCompra}==null?"0":$F{importeTotalCompra}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="base" x="443" y="0" width="70" height="18" uuid="a58b183a-d91a-4703-acf0-a107527c3fa0">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoControl}==null?"":$F{codigoControl}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="base" x="2" y="0" width="29" height="18" uuid="a487284a-2883-4092-bfed-2f1ae900f813"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{variableNumero}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="base" x="516" y="0" width="55" height="18" uuid="930b9bf6-78c8-49c1-a480-8c42f4579952">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{marcaEspecialId}.equals("IPN")?"PROD-NAL":$F{marcaEspecialId}.equals("SM")?"":$F{marcaEspecialId}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="515" y="0" width="1" height="18" isPrintInFirstWholeBand="true" uuid="0c429505-cd6a-478b-b43b-8b73d930f5b4"/>
+				<graphicElement>
+					<pen lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="-1" width="572" height="1" uuid="5279677e-6319-461b-b901-b6a4b005811a"/>
+				<graphicElement>
+					<pen lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+</jasperReport>

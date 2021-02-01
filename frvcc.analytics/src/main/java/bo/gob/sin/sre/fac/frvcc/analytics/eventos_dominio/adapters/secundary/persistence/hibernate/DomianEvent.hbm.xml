@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="bo.gob.sin.sre.fac.frvcc.analytics.eventos_dominio.model.AnalyticsDomainEvent" schema="sfe_facturacion" table="tsfe_eventos_dominio">
+        <composite-id name="id" class="bo.gob.sin.sre.fac.frvcc.analytics.eventos_dominio.model.AnalyticsDomainEventId" access="field">
+            <key-property column="seq_evento_vc" name="value" length="36" access="field" />
+        </composite-id>
+
+        <component name="aggregateId" class="bo.gob.sin.sre.fac.frvcc.analytics.eventos_dominio.model.AnalyticsDomainEventAggregateId" access="field">
+            <property name="value" column="seq_agregado_vc" type="string" length="36" access="field" />
+        </component>
+
+        <component name="name" class="bo.gob.sin.sre.fac.frvcc.analytics.eventos_dominio.model.AnalyticsDomainEventName" access="field">
+            <property name="value" column="nombre_evento_vc" type="string" access="field" />
+        </component>
+
+        <component name="body" class="bo.gob.sin.sre.fac.frvcc.analytics.eventos_dominio.model.AnalyticsDomainEventBody" access="field">
+            <property name="value" column="contendio_vc" type="string" length="2000" access="field" />
+        </component>
+
+        <component name="occurredOn" class="bo.gob.sin.sre.fac.frvcc.analytics.eventos_dominio.model.AnalyticsDomainEventOccurredOn" access="field">
+            <property name="value" column="fecha_evento_ts" type="java.time.LocalDateTime" access="field" />
+        </component>
+
+    </class>
+</hibernate-mapping>

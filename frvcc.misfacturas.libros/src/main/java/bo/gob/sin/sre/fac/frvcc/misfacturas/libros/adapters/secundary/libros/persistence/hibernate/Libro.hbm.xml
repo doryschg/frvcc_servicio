@@ -1,0 +1,208 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.Libro" schema="sfe_facturacion" table="tsfe_cv_libros">
+        <composite-id name="id" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroId" access="field">
+            <key-property column="seq_libro_vc"  name="value" length="36" access="field" />
+        </composite-id>
+        <component name="nit" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroNit" access="field">
+            <property name="value" column="nit_nb" type="java.lang.Long" access="field" />
+        </component>
+
+        <component name="ifc" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroIfc" access="field">
+            <property name="value" column="ifc_nb" type="java.lang.Long" access="field" />
+        </component>
+         <component name="razonSocial" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroRazonSocial" access="field">
+            <property name="value" column="razon_social_vc" type="java.lang.String" access="field" />
+        </component>
+        <component name="codAdministracion" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroCodigoAdministracion" access="field">
+            <property name="value" column="cod_administracion_id_nb" type="java.lang.Long" access="field" />
+        </component>
+         <component name="administracion" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroAdministracion" access="field">
+            <property name="value" column="administracion_vc" type="java.lang.String" access="field" />
+        </component>
+        <component name="mesPeriodo" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroMesPeriodo" access="field">
+            <property name="value" column="mes_periodo_nb" type="integer" access="field" />
+        </component>
+        <component name="anioPeriodo" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroAnioPeriodo" access="field">
+            <property name="value" column="anio_periodo_nb" type="integer" access="field" />
+        </component>
+        <component name="nombreLibro" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroNombreLibro" access="field">
+            <property name="value" column="nombre_libro_vc" type="java.lang.String" access="field" />
+        </component>
+        <component name="totalCompras" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroTotalComprasCf" access="field">
+            <property name="value" column="total_compras_cf_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        <component name="cantidadCompras" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroCantidadComprasCf" access="field">
+            <property name="value" column="cantidad_compras_cf_nb" type="integer" access="field" />
+        </component>
+        
+        <component name="cantidadComprasCfElec" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroCantidadComprasCfElec" access="field">
+            <property name="value" column="cantidad_compras_cf_elec_nb" type="integer" access="field" />
+        </component>
+        <component name="cantidadComprasCfIpn" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroCantidadComprasCfIpn" access="field">
+            <property name="value" column="cantidad_compras_cf_ipn_nb" type="integer" access="field" />
+        </component>
+        <component name="cantidadComprasCfOtras" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroCantidadComprasCfOtras" access="field">
+            <property name="value" column="cantidad_compras_cf_otras_nb" type="integer" access="field" />
+        </component>
+        <component name="cantidadComprasSdCf" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroCantidadComprasSdCf" access="field">
+            <property name="value" column="cantidad_compras_sdcf_nb" type="integer" access="field" />
+        </component>
+        <component name="totalComprasCfElec" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroTotalComprasCfElec" access="field">
+            <property name="value" column="total_compras_cf_elec_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        <component name="totalComprasCfIpn" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroTotalComprasCfIpn" access="field">
+            <property name="value" column="total_compras_cf_ipn_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        <component name="totalComprasCfOtras" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroTotalComprasCfOtras" access="field">
+            <property name="value" column="total_compras_cf_otras_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        <component name="totalComprasSdCf" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroTotalComprasSdCf" access="field">
+            <property name="value" column="total_compras_sdcf_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+         <component name="importeBaseCfElec" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroImporteBaseComprasCfElec" access="field">
+            <property name="value" column="ibase_compras_cf_elec_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        <component name="importeBaseCfIpn" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroImporteBaseComprasCfIpn" access="field">
+            <property name="value" column="ibase_compras_cf_ipn_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        <component name="importeBaseCfOtras" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroImporteBaseComprasCfOtras" access="field">
+            <property name="value" column="ibase_compras_cf_otras_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        <component name="importeBaseCf" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroImporteBaseComprasCf" access="field">
+            <property name="value" column="ibase_compras_cf_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        
+        <component name="determinacionPagoCf" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroDeterminacionPagoCf" access="field">
+            <property name="value" column="determinacion_pago_cf_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        <component name="determinacionPagoCfIpn" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroDeterminacionPagoCfIpn" access="field">
+            <property name="value" column="determinacion_pago_cf_ipn_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        <component name="determinacionPagoCfOtras" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroDeterminacionPagoCfOtras" access="field">
+            <property name="value" column="determinacion_pago_cf_otras_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        <component name="determinacionPagoSdCf" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroDeterminacionPagoSdCf" access="field">
+            <property name="value" column="determinacion_pago_sdcf_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        <component name="determinacionPago" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroDeterminacionPago" access="field">
+            <property name="value" column="determinacion_pago_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        
+        
+        <component name="totalComprasNotas" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroTotalComprasNotas" access="field">
+            <property name="value" column="total_compras_notas_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        <component name="cantidadComprasNotas" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroCantidadComprasNotas" access="field">
+            <property name="value" column="cantidad_compras_notas_nb" type="integer" access="field" />
+        </component>
+        <component name="totalVentas" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroTotalVentasCf" access="field">
+            <property name="value" column="total_ventas_cf_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        <component name="cantidadVentas" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroCantidadVentasCf" access="field">
+            <property name="value" column="cantidad_ventas_cf_nb" type="integer" access="field" />
+        </component>
+        
+        <component name="cantidadVentasCfElec" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroCantidadVentasCfElec" access="field">
+            <property name="value" column="cantidad_ventas_cf_elec_nb" type="integer" access="field" />
+        </component>
+        <component name="cantidadVentasCfOtras" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroCantidadVentasCfOtras" access="field">
+            <property name="value" column="cantidad_ventas_cf_otras_nb" type="integer" access="field" />
+        </component>
+        <component name="totalVentasCfElec" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroTotalVentasCfElec" access="field">
+            <property name="value" column="total_ventas_cf_elec_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        <component name="totalVentasCfOtras" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroTotalVentasCfOtras" access="field">
+            <property name="value" column="total_ventas_cf_otras_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+         <component name="cantidadVentasSdCf" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroCantidadVentasSdCf" access="field">
+            <property name="value" column="cantidad_ventas_sdcf_nb" type="integer" access="field" />
+        </component>
+         <component name="cantidadVentasSdCfOtras" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroCantidadVentasSdCfOtras" access="field">
+            <property name="value" column="cantidad_ventas_sdcf_otras_nb" type="integer" access="field" />
+        </component>
+         <component name="cantidadVentasSdCfSrg" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroCantidadVentasSdCfSrg" access="field">
+            <property name="value" column="cantidad_ventas_sdcf_srg_nb" type="integer" access="field" />
+        </component>
+        <component name="totalVentasSdCf" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroTotalVentasSdCf" access="field">
+            <property name="value" column="total_ventas_sdcf_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        <component name="totalVentasSdCfOtras" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroTotalVentasSdCfOtras" access="field">
+            <property name="value" column="total_ventas_sdcf_otras_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        <component name="totalVentasSdCfSrg" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroTotalVentasSdCfSrg" access="field">
+            <property name="value" column="total_ventas_sdcf_srg_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        
+        
+        <component name="totalVentasNotas" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroTotalVentasNotas" access="field">
+            <property name="value" column="total_ventas_notas_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        <component name="cantidadVentasNotas" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroCantidadVentasNotas" access="field">
+            <property name="value" column="cantidad_ventas_notas_nb" type="integer" access="field" />
+        </component>
+        <component name="tipoPresentacionId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroTipoPresentacionId" access="field">
+            <property name="value" column="tipo_presentacion_id_vc" type="string" access="field" />
+        </component>
+        <component name="fechaPresentacion" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroFechaPresentacion" access="field">
+            <property name="value" column="fecha_presentacion_ts" type="java.time.LocalDateTime" access="field" />
+        </component>
+        <component name="periodicidadId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroPeriodicidadId" access="field">
+            <property name="value" column="periodicidad_id_vc" type="java.lang.String" access="field" />
+        </component>
+        <component name="cantidadPeriodicidad" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroCantidadPeriodicidad" access="field">
+            <property name="value" column="cantidad_periodicidad_vc" type="java.lang.String" access="field" />
+        </component>
+        <component name="numeroOrden" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroNumeroOrden" access="field">
+            <property name="value" column="nro_orden_nb" type="java.lang.Long" access="field" />
+        </component>
+        <component name="estadoLibroId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroEstadoLibroId" access="field">
+            <property name="value" column="estado_Libro_id_vc" type="string" access="field" />
+        </component>
+        <component name="fechaEstado" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroFechaEstado" access="field">
+            <property name="value" column="fecha_estado_dt" type="java.time.LocalDate" access="field" />
+        </component>
+        <component name="numeroEnvio" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroNumeroEnvio" access="field">
+            <property name="value" column="nro_envio_nb" type="java.lang.Integer" access="field" />
+        </component>
+        <component name="libroRectificadoId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroRectificadoId" access="field">
+            <property name="value" column="seq_libro_rectificado_vc" type="java.lang.String" access="field" />
+        </component>
+        <component name="conMovimiento" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroConMovimiento" access="field">
+            <property name="value" column="con_movimiento_vc" type="java.lang.String" access="field" />
+        </component>
+        
+        
+        
+        <component name="usuarioRegistro" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroUsuarioRegistro" access="field">
+            <property name="value" column="usuario_registro_nb" type="java.lang.Long" access="field" />
+        </component>
+        <component name="fechaRegistro" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroFechaRegistro" access="field">
+            <property name="value" column="fecha_registro_ts" type="java.time.LocalDateTime" access="field" />
+        </component>
+        <component name="usuarioUltimaModificacion" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroUsuarioUltimaModificacion" access="field">
+            <property name="value" column="usuario_ultima_modificacion_nb" type="java.lang.Long" access="field" />
+        </component>
+        <component name="fechaUltimaModificacion" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroFechaUltimaModificacion" access="field">
+            <property name="value" column="fecha_ultima_modificacion_ts" type="java.time.LocalDateTime" access="field" />
+        </component>
+        <component name="estadoId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.libros.model.libros.LibroEstadoId" access="field">
+            <property name="value" column="estado_id_vc" type="string" access="field" />
+        </component>
+        <property name="compras" column="datos_compras_js" access="field">
+            <type name="json_string">
+                <param name="list_of">bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraId</param>
+            </type>
+        </property>
+        <property name="comprasNotas" column="datos_compras_notas_js" access="field">
+            <type name="json_string">
+                <param name="list_of">bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras_notas.CompraNotaId</param>
+            </type>
+        </property>
+
+
+    </class>
+</hibernate-mapping>

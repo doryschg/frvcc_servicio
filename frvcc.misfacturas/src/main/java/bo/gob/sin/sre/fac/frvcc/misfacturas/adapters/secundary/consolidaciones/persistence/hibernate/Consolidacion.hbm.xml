@@ -1,0 +1,120 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.Consolidacion" schema="sfe_facturacion" table="tsfe_ag_consolidacion">
+        <composite-id name="id" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionId" access="field">
+            <key-property column="seq_consolidacion_vc"  name="value" length="36" access="field" />
+        </composite-id>
+
+        <component name="ifcAgente" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionIfcAgente" access="field">
+            <property name="value" column="ifc_agente_nb" type="java.lang.Long" access="field" />
+        </component>
+        
+        <component name="nitAgente" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionNitAgente" access="field">
+            <property name="value" column="nit_agente_nb" type="java.lang.Long" access="field" />
+        </component>
+        
+        <component name="razonSocialAgente" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionRazonSocialAgente" access="field">
+            <property name="value" length="36" column="razon_social_agente_vc" type="string" access="field" />
+        </component>
+
+        <component name="sucursal" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionSucursal" access="field">
+            <property name="value" column="sucursal_nb" type="java.lang.Integer" access="field" />
+        </component>
+        
+        <component name="direccionSucursal" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionDireccionSucursal" access="field">
+            <property name="value" column="direccion_sucursal_vc" type="string" access="field" />
+        </component>
+
+        <component name="departamentoSucursal" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionDepartamentoSucursal" access="field">
+            <property name="value" column="departamento_sucursal_vc" type="string" access="field" />
+        </component>
+
+        <component name="administracion" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionAdministracion" access="field">
+            <property name="value" column="administracion_nb" type="java.lang.Long" access="field" />
+        </component>
+        <component name="gestion" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionGestion" access="field">
+            <property name="value" column="gestion_nb" type="java.lang.Integer" access="field" />
+        </component>
+        <component name="periodo" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionPeriodo" access="field">
+            <property name="value" column="periodo_nb" type="java.lang.Integer" access="field" />
+        </component>
+        <component name="cantidadFormularios" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionCantidadFormularios" access="field">
+            <property name="value" column="cantidad_formularios_nb" type="java.lang.Long" access="field" />
+        </component>
+        <component name="totalCantidadFacturas" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionTotalCantidadFacturas" access="field">
+            <property name="value" column="total_cantidad_facturas_nb" type="java.lang.Integer" access="field" />
+        </component>
+        <component name="totalCantidadIpnFacturas" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionTotalCantidadIpnFacturas" access="field">
+            <property name="value" column="total_cantidad_ipn_facturas_nb" type="java.lang.Integer" access="field" />
+        </component>
+        <component name="totalCantidadOtrasFacturas" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionTotalCantidadOtrasFacturas" access="field">
+            <property name="value" column="total_cantidad_o_facturas_nb" type="java.lang.Integer" access="field" />
+        </component>
+        <component name="totalCantidad7rgFacturas" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionTotalCantidad7rgFacturas" access="field">
+            <property name="value" column="total_cantidad_srg_facturas_nb" type="java.lang.Integer" access="field" />
+        </component>
+        <component name="totalImporteFacturas" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionTotalImporteFacturas" access="field">
+            <property name="value" column="total_importe_facturas_nb" type="java.math.BigInteger" access="field" />
+        </component>
+        <component name="totalImporteIpnFacturas" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionTotalImporteIpnFacturas" access="field">
+            <property name="value" column="total_importe_ipn_facturas_nb" type="java.math.BigInteger" access="field" />
+        </component>
+        <component name="totalImporteOtrasFacturas" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionTotalImporteOtrasFacturas" access="field">
+            <property name="value" column="total_importe_o_facturas_nb" type="java.math.BigInteger" access="field" />
+        </component>
+        <component name="totalImporte7rgFacturas" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionTotalImporte7rgFacturas" access="field">
+            <property name="value" column="total_importe_srg_facturas_nb" type="java.math.BigInteger" access="field" />
+        </component>
+        <component name="totalDeterminacionPagoCuenta" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionTotalDeterminacionPagoCuenta" access="field">
+            <property name="value" column="total_det_pago_cuenta_nb" type="java.math.BigInteger" access="field" />
+        </component>
+        <component name="totalPagoCuenta" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionTotalPagoCuenta" access="field">
+            <property name="value" column="total_pago_cuenta_nb" type="java.math.BigInteger" access="field" />
+        </component>
+        <component name="estadoConsolidadoId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionEstadoConsolidadoId" access="field">
+            <property name="value" column="estado_consolidado_id_vc" type="java.lang.String" access="field" />
+        </component>
+        <component name="fechaConsolidado" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionFechaConsolidado" access="field">
+            <property name="value" column="fecha_consolidado_ts" type="java.time.LocalDateTime" access="field" />
+        </component>
+        <component name="usuarioConsolidador" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionUsuarioConsolidador" access="field">
+            <property name="value" column="usuario_consolidador_nb" type="java.lang.Long" access="field" />
+        </component>
+        <component name="loginUsuarioConsolidador" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionLoginUsuarioConsolidador" access="field">
+            <property name="value" column="login_usuario_consolidador_vc" type="string" access="field" />
+        </component>
+        <component name="nombreConsolidador" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionNombreConsolidador" access="field">
+            <property name="value" column="nombre_consolidador_vc" type="java.lang.String" access="field" />
+        </component>
+        <component name="usuarioRegistro" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionUsuarioRegistro" access="field">
+            <property name="value" column="usuario_registro_nb" type="java.lang.Long" access="field" />
+        </component>
+		<component name="fechaRegistro" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionFechaRegistro" access="field">
+            <property name="value" column="fecha_registro_ts" type="java.time.LocalDateTime" access="field" />
+        </component>
+        <component name="usuarioUltimaModificacion" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionUsuarioUltimaModificacion" access="field">
+            <property name="value" column="usuario_ultima_modificacion_nb" type="java.lang.Long" access="field" />
+        </component>
+       <component name="fechaUltimaModificacion" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionFechaUltimaModificacion" access="field">
+            <property name="value" column="fecha_ultima_modificacion_ts" type="java.time.LocalDateTime" access="field" />
+        </component>
+        <component name="estadoId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionEstadoId" access="field">
+            <property name="value" column="estado_id_vc" type="java.lang.String" access="field" />
+        </component>
+        <component name="tipoId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionTipoId" access="field">
+            <property name="value" column="tipo_consolidacion_vc" type="java.lang.String" access="field" />
+        </component>
+        <component name="consolidacionPrincipalId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.consolidaciones.ConsolidacionIdConsolidacionPrincipal" access="field">
+            <property name="value" column="seq_consolidacion_principal_vc" type="java.lang.String" access="field" />
+        </component>
+        <property name="formularios" column="formularios_js" access="field">
+            <type name="json_string">
+                <param name="list_of">bo.gob.sin.sre.fac.frvcc.misfacturas.model.formularios.FormularioId</param>
+            </type>
+        </property>
+    </class>
+</hibernate-mapping>

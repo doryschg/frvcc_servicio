@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>sre.fac.frvcc</artifactId>
+        <groupId>bo.gob.sin.sre.fac.frvcc</groupId>
+        <version>0.8.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>frvcc.misfacturas</artifactId>
+    <properties>
+        <java.version>11</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+
+        </plugins>
+        <resources>
+            <!-- <resource> -->
+            <!-- <directory>./frvcc.recepcion/src/main/java/bo/gob/sin/sre/fac/frvcc/recepcion/archivo/infrastructure/persistence/hibernate</directory> -->
+            <!-- <includes> -->
+            <!-- <include>**/*.xml</include> -->
+            <!-- </includes> -->
+            <!-- </resource> -->
+            <resource>
+
+                <directory>${basedir}/src/main/java/bo/gob/sin/sre/fac/frvcc/misfacturas/adapters/secundary/compras/persistence/hibernate</directory>
+                <targetPath>${basedir}/target/classes/bo/gob/sin/sre/fac/frvcc/misfacturas/adapters/secundary/compras/persistence/hibernate</targetPath>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>${basedir}/src/main/java/bo/gob/sin/sre/fac/frvcc/misfacturas/adapters/secundary/formularios/persistence/hibernate</directory>
+                <targetPath>${basedir}/target/classes/bo/gob/sin/sre/fac/frvcc/misfacturas/adapters/secundary/formularios/persistence/hibernate</targetPath>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+              <resource>
+                <directory>${basedir}/src/main/java/bo/gob/sin/sre/fac/frvcc/misfacturas/adapters/secundary/hformularios/persistence/hibernate</directory>
+                <targetPath>${basedir}/target/classes/bo/gob/sin/sre/fac/frvcc/misfacturas/adapters/secundary/hformularios/persistence/hibernate</targetPath>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+              <resource>
+                <directory>${basedir}/src/main/java/bo/gob/sin/sre/fac/frvcc/misfacturas/adapters/secundary/libros/persistence/hibernate</directory>
+                <targetPath>${basedir}/target/classes/bo/gob/sin/sre/fac/frvcc/misfacturas/adapters/secundary/libros/persistence/hibernate</targetPath>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>            
+            <resource>
+                <directory>${basedir}/src/main/java/bo/gob/sin/sre/fac/frvcc/misfacturas/adapters/secundary/compras_notas/persistence/hibernate</directory>
+                <targetPath>${basedir}/target/classes/bo/gob/sin/sre/fac/frvcc/misfacturas/adapters/secundary/compras_notas/persistence/hibernate</targetPath>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>${basedir}/src/main/java/bo/gob/sin/sre/fac/frvcc/misfacturas/adapters/secundary/sucursal_usuario/persistence/hibernate</directory>
+                <targetPath>${basedir}/target/classes/bo/gob/sin/sre/fac/frvcc/misfacturas/adapters/secundary/sucursal_usuario/persistence/hibernate</targetPath>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+
+            <resource>
+                <directory>${basedir}/src/main/java/bo/gob/sin/sre/fac/frvcc/misfacturas/adapters/secundary/consolidaciones/persistence/hibernate</directory>
+                <targetPath>${basedir}/target/classes/bo/gob/sin/sre/fac/frvcc/misfacturas/adapters/secundary/consolidaciones/persistence/hibernate</targetPath>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+
+
+
+            <resource>
+                <directory>${basedir}/src/main/resources</directory>
+                <targetPath>${basedir}/target/classes</targetPath>
+                <includes>
+                    <include>**/*.png</include>
+                    <include>**/*.jasper</include>
+                    <include>**/*.jrxml</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+    <dependencies>
+        <dependency>
+            <groupId>bo.gob.sin.sre.fac.frvcc</groupId>
+            <artifactId>frvcc.shared</artifactId>
+            <version>0.8.0.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>bo.gob.sin.sre.fac.frvcc</groupId>
+            <artifactId>frvcc.analytics</artifactId>
+            <version>0.8.0.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+
+    </dependencies>
+
+
+</project>

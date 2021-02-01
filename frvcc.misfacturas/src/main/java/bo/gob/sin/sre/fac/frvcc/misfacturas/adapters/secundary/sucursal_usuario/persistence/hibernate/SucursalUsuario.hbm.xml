@@ -1,0 +1,54 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="bo.gob.sin.sre.fac.frvcc.misfacturas.model.sucursal_usuario.SucursalUsuario" schema="sfe_facturacion" table="tsfe_ag_sucursal_usuario">
+        <composite-id name="id" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.sucursal_usuario.SucursalUsuarioId" access="field">
+            <key-property column="seq_sucursal_usuario_vc"  name="value" length="36" access="field" />
+        </composite-id>
+        <component name="ifcAgente" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.sucursal_usuario.SucursalUsuarioIfcAgente" access="field">
+            <property name="value" column="ifc_agente_nb" type="java.lang.Long" access="field" />
+        </component>
+        <component name="nitAgente" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.sucursal_usuario.SucursalUsuarioNitAgente" access="field">
+            <property name="value" column="nit_agente_nb" type="java.lang.Long" access="field" />
+        </component>
+        <component name="nroSucursal" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.sucursal_usuario.SucursalUsuarioNumeroSucursal" access="field">
+            <property name="value" column="nro_sucursal_nb" type="java.lang.Integer" access="field" />
+        </component>
+        <component name="usuarioReceptor" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.sucursal_usuario.SucursalUsuarioUsuarioReceptor" access="field">
+            <property name="value" column="usuario_receptor_nb" type="java.lang.Long" access="field" />
+        </component>
+        <component name="loginUsuarioReceptor" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.sucursal_usuario.SucursalUsuarioLoginUsuarioReceptor" access="field">
+            <property name="value" column="login_usuario_receptor_vc" type="string" access="field" />
+        </component> 
+        <component name="nombreUsuarioReceptor" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.sucursal_usuario.SucursalUsuarioNombreReceptor" access="field">
+            <property name="value" column="nombre_receptor_vc" type="string" access="field" />
+        </component>
+		<component name="estadoAsignacionId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.sucursal_usuario.SucursalUsuarioEstadoAsignacion" access="field">
+            <property name="value" column="estado_asignacion_id_vc" type="string" access="field" />
+        </component>    
+        <component name="fechaDesde" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.sucursal_usuario.SucursalUsuarioFechaDesde" access="field">
+            <property name="value" column="fecha_desde_dt" type="java.time.LocalDate" access="field" />
+        </component>
+        <component name="fechaHasta" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.sucursal_usuario.SucursalUsuarioFechaHasta" access="field">
+            <property name="value" column="fecha_hasta_dt" type="java.time.LocalDate" access="field" />
+        </component>
+        <component name="usuarioRegistro" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.sucursal_usuario.SucursalUsuarioUsuarioRegistro" access="field">
+            <property name="value" column="usuario_registro_nb" type="java.lang.Long" access="field" />
+        </component>
+        <component name="fechaRegistro" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.sucursal_usuario.SucursalUsuarioFechaRegistro" access="field">
+            <property name="value" column="fecha_registro_ts" type="java.time.LocalDateTime" access="field" />
+        </component>
+        <component name="usuarioUltimaModificacion" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.sucursal_usuario.SucursalUsuarioUsuarioUltimaModificacion" access="field">
+            <property name="value" column="usuario_ultima_modificacion_nb" type="java.lang.Long" access="field" />
+        </component>
+        <component name="fechaUltimaModificacion" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.sucursal_usuario.SucursalUsuarioFechaUltimaModificacion" access="field">
+            <property name="value" column="fecha_ultima_modificacion_ts" type="java.time.LocalDateTime" access="field" />
+        </component>
+        <component name="estadoId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.sucursal_usuario.SucursalUsuarioEstadoId" access="field">
+            <property name="value" column="estado_id_vc" type="string" access="field" />
+        </component>
+       </class>
+</hibernate-mapping>

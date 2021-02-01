@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping>
+    <typedef class="bo.gob.sin.sre.fac.frvcc.shared.adpters.secundary.hibernate.JsonListType" name="json_string" />
+</hibernate-mapping>

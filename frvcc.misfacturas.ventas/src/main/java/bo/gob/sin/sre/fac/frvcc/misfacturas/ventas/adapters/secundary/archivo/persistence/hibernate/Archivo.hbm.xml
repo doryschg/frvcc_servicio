@@ -1,0 +1,44 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.archivo.Archivo" schema="sfe_facturacion" table="tsfe_cv_archivos">
+        <composite-id name="id" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.archivo.ArchivoId" access="field">
+            <key-property column="seq_archivo_vc" name="value" length="36" access="field" />
+        </composite-id>
+
+        <component name="tipoRecepcionId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.archivo.ArchivoTipoRecepcionId" access="field">
+            <property name="value" column="tipo_recepcion_id_vc" type="string" access="field" />
+        </component>
+
+        <component name="origenId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.archivo.ArchivoOrigenId" access="field">
+            <property name="value" column="origen_id_vc" type="java.lang.String" access="field" />
+        </component>
+
+        <component name="archivoByte" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.archivo.ArchivoByte" access="field">
+            <property name="value" column="archivo_bl" type="byte[]" access="field" />
+        </component>
+
+        <component name="idPadre" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.archivo.ArchivoIdPadre" access="field">
+            <property name="value" column="seq_archivo_padre_vc" type="string" access="field" />
+        </component>
+
+        <component name="usuarioRegistro" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.archivo.ArchivoUsuarioRegistro" access="field">
+            <property name="value" column="usuario_registro_nb" type="java.lang.Long" access="field" />
+        </component>
+        <component name="fechaRegistro" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.archivo.ArchivoFechaRegistro" access="field">
+            <property name="value" column="fecha_registro_ts" type="java.time.LocalDateTime" access="field" />
+        </component>
+        <component name="usuarioUltimaModificacion" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.archivo.ArchivoUsuarioUltimaModificacion" access="field">
+            <property name="value" column="usuario_ultima_modificacion_nb" type="java.lang.Long" access="field" />
+        </component>
+        <component name="fechaUltimaModificacion" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.archivo.ArchivoFechaUltimaModificacion" access="field">
+            <property name="value" column="fecha_ultima_modificacion_ts" type="java.time.LocalDateTime" access="field" />
+        </component>
+        <component name="estadoId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.archivo.ArchivoEstadoId" access="field">
+            <property name="value" column="estado_id_vc" type="string" access="field" />
+        </component>
+    </class>
+</hibernate-mapping>

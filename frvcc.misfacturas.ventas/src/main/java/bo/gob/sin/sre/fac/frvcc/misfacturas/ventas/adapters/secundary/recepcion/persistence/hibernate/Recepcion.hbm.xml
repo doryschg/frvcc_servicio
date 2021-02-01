@@ -1,0 +1,82 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.recepcion.Recepcion" schema="sfe_facturacion" table="tsfe_cv_recepciones">
+        <composite-id name="id" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.recepcion.RecepcionId" access="field">
+            <key-property column="seq_recepcion_vc" name="value" length="36" access="field" />
+        </composite-id>
+
+        <component name="tipoRecepcionId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.recepcion.RecepcionTipoRecepcionId" access="field">
+            <property name="value" column="tipo_recepcion_id_vc" type="string" access="field" />
+        </component>
+
+        <component name="tipoDocumentoId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.recepcion.RecepcionTipoDocumentoId" access="field">
+            <property name="value" column="tipo_documento_id_vc" type="string" access="field" />
+        </component>
+
+        <component name="ifc" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.recepcion.RecepcionIfc" access="field">
+            <property name="value" column="ifc_nb" type="java.lang.Long" access="field" />
+        </component>
+
+        <component name="nit" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.recepcion.RecepcionNit" access="field">
+            <property name="value" column="nit_nb" type="java.lang.Long" access="field" />
+        </component>
+
+        <component name="totalImporte" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.recepcion.RecepcionTotalImporte" access="field">
+            <property name="value" column="total_importe_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+
+        <component name="cantidad" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.recepcion.RecepcionCantidad" access="field">
+            <property name="value" column="cantidad_nb" type="integer" access="field" />
+        </component>
+
+        <component name="accionId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.recepcion.RecepcionAccionId" access="field">
+            <property name="value" column="accion_id_vc" type="string" access="field" />
+        </component>
+
+        <component name="archivoId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.recepcion.RecepcionArchivoId" access="field">
+            <property name="value" column="seq_archivo_vc" type="java.lang.String" access="field" />
+        </component>
+
+        <component name="fechaRecepcion" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.recepcion.RecepcionFechaRecepcion" access="field">
+            <property name="value" column="fecha_recepcion_dh" type="java.time.LocalDateTime" access="field" />
+        </component>
+
+        <component name="estadoRecepcionId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.recepcion.RecepcionEstadoRecepcionId" access="field">
+            <property name="value" column="estado_recepcion_id_vc" type="string" access="field" />
+        </component>
+
+        <component name="fechaValidacion" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.recepcion.RecepcionFechaValidacion" access="field">
+            <property name="value" column="fecha_validacion_dh" type="java.time.LocalDateTime" access="field" />
+        </component>
+		
+		<!--component name="errores" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.recepcion.RecepcionErrores" access="field">
+            <property name="value" column="errores_js" type="java.lang.String" access="field" />
+        </component>-->
+
+        <property name="errores" column="errores_js" access="field">
+            <type name="json_objet_string">
+                <param name="objet_of">bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.recepcion.RecepcionErrores</param>
+            </type>
+        </property>
+
+        <component name="usuarioRegistro" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.recepcion.RecepcionUsuarioRegistro" access="field">
+            <property name="value" column="usuario_registro_nb" type="java.lang.Long" access="field" />
+        </component>
+        <component name="fechaRegistro" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.recepcion.RecepcionFechaRegistro" access="field">
+            <property name="value" column="fecha_registro_ts" type="java.time.LocalDateTime" access="field" />
+        </component>
+        <component name="usuarioUltimaModificacion" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.recepcion.RecepcionUsuarioUltimaModificacion" access="field">
+            <property name="value" column="usuario_ultima_modificacion_nb" type="java.lang.Long" access="field" />
+        </component>
+        <component name="fechaUltimaModificacion" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.recepcion.RecepcionFechaUltimaModificacion" access="field">
+            <property name="value" column="fecha_ultima_modificacion_ts" type="java.time.LocalDateTime" access="field" />
+        </component>
+        <component name="estadoId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.recepcion.RecepcionEstadoId" access="field">
+            <property name="value" column="estado_id_vc" type="string" access="field" />
+          </component>
+    </class>
+</hibernate-mapping>

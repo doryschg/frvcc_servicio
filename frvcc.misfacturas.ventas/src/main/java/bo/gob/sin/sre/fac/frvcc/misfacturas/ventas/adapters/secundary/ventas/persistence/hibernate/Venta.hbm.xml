@@ -1,0 +1,123 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.Venta" schema="sfe_facturacion" table="tsfe_cv_ventas">
+        <composite-id name="id" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaId" access="field">
+            <key-property column="seq_venta_vc"  name="value" length="36" access="field" />
+        </composite-id>		
+		<component name="ifcProveedor" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaIfcProveedor" access="field">
+            <property name="value" column="ifc_proveedor_nb" type="java.lang.Long" access="field" />
+        </component>
+		<component name="nitProveedor" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaNitProveedor" access="field">
+            <property name="value" column="nit_proveedor_nb" type="java.lang.Long" access="field" />
+        </component>
+		<component name="razonSocialProveedor" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaRazonSocialProveedor" access="field">
+            <property name="value" column="razon_social_proveedor_vc" type="java.lang.String" access="field" />
+        </component>	
+		<component name="numeroFactura" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaNumeroFactura" access="field">
+            <property name="value" column="nro_factura_nb" type="java.lang.Long" access="field" />
+        </component>
+		<component name="codigoAutorizacion" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaCodigoAutorizacion" access="field">
+            <property name="value" column="cod_autorizacion_vc" type="java.lang.String" access="field" />
+        </component>
+		<component name="fechaFactura" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaFechaFactura" access="field">
+            <property name="value" column="fecha_factura_dt" type="java.time.LocalDate" access="field" />
+        </component>
+		<component name="importeTotalVenta" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaImporteTotal" access="field">
+            <property name="value" column="importe_total_venta_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+		<component name="importeIceIehdTasas" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaImporteIceIehdTasas" access="field">
+            <property name="value" column="importe_ice_iehd_tasas_nb" type="java.math.BigDecimal" access="field" />
+        </component>	
+		<component name="importeExento" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaImporteExento" access="field">
+            <property name="value" column="importe_exento_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+		<component name="importeTasaCero" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaImporteTasaCero" access="field">
+            <property name="value" column="importe_tasa_cero_nb" type="java.math.BigDecimal" access="field" />
+        </component>		
+		<component name="importeNoSujetoDf" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaImporteNoSujetoDf" access="field">
+            <property name="value" column="importe_no_sujeto_df_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+		<component name="subtotal" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaSubTotal" access="field">
+            <property name="value" column="subtotal_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+		<component name="descuento" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaDescuento" access="field">
+            <property name="value" column="descuento_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+		<component name="importeBase" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaImporteBase" access="field">
+            <property name="value" column="importe_base_df_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+		<component name="debitoFiscal" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaDebitoFiscal" access="field">
+            <property name="value" column="debito_fiscal_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+		<component name="codigoControl" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaCodigoControl" access="field">
+            <property name="value" column="codigo_control_vc" type="java.lang.String" access="field" />
+        </component>
+		<component name="modalidadId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaModalidadId" access="field">
+            <property name="value" column="modalidad_id_vc" type="java.lang.String" access="field" />
+        </component>	
+		<component name="estadoVentaId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaEstadoVentaId" access="field">
+            <property name="value" column="estado_venta_id_vc" type="string" access="field" />
+        </component>			
+		<component name="numeroDocumentoCliente" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaNumeroDocumentoCliente" access="field">
+            <property name="value" column="nro_doc_cliente_vc" type="java.lang.String" access="field" />
+        </component>
+		<component name="nombreCliente" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaNombreCliente" access="field">
+            <property name="value" column="nombre_cliente_vc" type="java.lang.String" access="field" />
+        </component>		 	
+		<component name="origenId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaOrigenId" access="field">
+            <property name="value" column="origen_id_vc" type="java.lang.String" access="field" />
+        </component>	
+		<component name="estadoUsoId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaEstadoUsoId" access="field">
+            <property name="value" column="estado_uso_id_vc" type="java.lang.String" access="field" />
+        </component>	
+		<component name="impuestoUsoId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaImpuestoUsoId" access="field">
+            <property name="value" column="impuesto_uso_id_vc" type="java.lang.String" access="field" />
+        </component>
+		<component name="gestionUso" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaGestionUso" access="field">
+            <property name="value" column="gestion_uso_nb" type="integer" access="field" />
+        </component>
+		    <component name="periodoUso" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaPeriodoUso" access="field">
+            <property name="value" column="periodo_uso_nb" type="integer" access="field" />
+        </component>		
+		<component name="nombreFormularioUso" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaNombreFormularioUso" access="field">
+            <property name="value" column="nombre_formulario_uso_vc" type="java.lang.String" access="field" />
+        </component>	
+		    <component name="formularioId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaFormularioId" access="field">
+            <property name="value" column="seq_formulario_vc" type="java.lang.String" access="field" />
+        </component>		
+		 <component name="libroId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaLibroId" access="field">
+            <property name="value" column="seq_libro_vc" type="string" access="field" />
+        </component>	
+		 <component name="recepcionId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaRecepcionId" access="field">
+            <property name="value" column="seq_recepcion_vc" type="string" access="field" />
+        </component>	
+		<component name="secuencia" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaSecuencia" access="field">
+            <property name="value" column="secuencia_nb" type="java.lang.Long" access="field" />
+        </component>        
+		<component name="conDerechoDf" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaConDerechoDf" access="field">
+        <property name="value" column="con_derecho_df_vc" type="java.lang.String" access="field" />
+        </component>
+		<component name="marcaEspecialId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaMarcaEspecialId" access="field">
+        <property name="value" column="marca_especial_id_vc" type="java.lang.String" access="field" />
+        </component>
+ 
+        <component name="usuarioRegistro" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaUsuarioRegistro" access="field">
+            <property name="value" column="usuario_registro_nb" type="java.lang.Long" access="field" />
+        </component>
+        <component name="fechaRegistro" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaFechaRegistro" access="field">
+            <property name="value" column="fecha_registro_ts" type="java.time.LocalDateTime" access="field" />
+        </component>
+        <component name="usuarioUltimaModificacion" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaUsuarioUltimaModificacion" access="field">
+            <property name="value" column="usuario_ultima_modificacion_nb" type="java.lang.Long" access="field" />
+        </component>
+        <component name="fechaUltimaModificacion" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaFechaUltimaModificacion" access="field">
+            <property name="value" column="fecha_ultima_modificacion_ts" type="java.time.LocalDateTime" access="field" />
+        </component>
+        <component name="estadoId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.ventas.model.ventas.VentaEstadoId" access="field">
+            <property name="value" column="estado_id_vc" type="java.lang.String" access="field" />
+        </component>
+    </class>
+</hibernate-mapping>

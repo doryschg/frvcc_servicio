@@ -1,0 +1,80 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="bo.gob.sin.sre.fac.frvcc.misfacturas.model.hformularios.HFormulario" schema="sfe_facturacion" table="tsfe_cv_h_formularios">
+        <composite-id name="id" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.hformularios.HFormularioHistoricoId" access="field">
+            <key-property column="seq_h_formulario_vc"  name="value" length="36" access="field" />
+        </composite-id>
+		<component name="idFormulario" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.hformularios.HFormularioId" access="field">
+            <property column="seq_formulario_vc"  name="value" length="36" access="field" />
+        </component>
+        <component name="estadoFormularioId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.hformularios.HFormularioEstadoFormularioId" access="field">
+            <property name="value" column="estado_formulario_id_vc" type="string" access="field" />
+        </component>    
+        <component name="fechaDesde" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.hformularios.HFormularioFechaDesde" access="field">
+            <property name="value" column="fecha_desde_dt" type="java.time.LocalDate" access="field" />
+        </component>
+        <component name="fechaHasta" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.hformularios.HFormularioFechaHasta" access="field">
+            <property name="value" column="fecha_hasta_dt" type="java.time.LocalDate" access="field" />
+        </component>
+        <component name="numeroOrden" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.hformularios.HFormularioNumeroOrden" access="field">
+            <property name="value" column="nro_orden_nb" type="java.lang.Long" access="field" />
+        </component>
+        <component name="usuarioRegistro" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.hformularios.HFormularioUsuarioRegistro" access="field">
+            <property name="value" column="usuario_registro_nb" type="java.lang.Long" access="field" />
+        </component>
+        <component name="fechaRegistro" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.hformularios.HFormularioFechaRegistro" access="field">
+            <property name="value" column="fecha_registro_ts" type="java.time.LocalDateTime" access="field" />
+        </component>
+        <component name="usuarioUltimaModificacion" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.hformularios.HFormularioUsuarioUltimaModificacion" access="field">
+            <property name="value" column="usuario_ultima_modificacion_nb" type="java.lang.Long" access="field" />
+        </component>
+        <component name="fechaUltimaModificacion" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.hformularios.HFormularioFechaUltimaModificacion" access="field">
+            <property name="value" column="fecha_ultima_modificacion_ts" type="java.time.LocalDateTime" access="field" />
+        </component>
+        <component name="estadoId" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.hformularios.HFormularioEstadoId" access="field">
+            <property name="value" column="estado_id_vc" type="string" access="field" />
+        </component>
+        <component name="totalComprasCfIpn" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.hformularios.HFormularioTotalComprasCfIpn" access="field">
+            <property name="value" column="total_compras_cf_ipn_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        <component name="totalComprasCfOtras" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.hformularios.HFormularioTotalComprasCfOtras" access="field">
+            <property name="value" column="total_compras_cf_otras_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        <component name="totalComprasSdCf" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.hformularios.HFormularioTotalComprasSdCf" access="field">
+            <property name="value" column="total_compras_sdcf_nb" type="java.math.BigDecimal" access="field" />
+        </component>
+        <component name="totalComprasCfRed" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.hformularios.HFormularioTotalComprasCfRed" access="field">
+            <property name="value" column="total_compras_cf_red_nb" type="java.math.BigInteger" access="field" />
+        </component>
+        <component name="totalComprasCfIpnRed" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.hformularios.HFormularioTotalComprasCfIpnRed" access="field">
+            <property name="value" column="total_compras_cf_ipn_red_nb" type="java.math.BigInteger" access="field" />
+        </component>
+        <component name="totalComprasCfOtrasRed" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.hformularios.HFormularioTotalComprasCfOtrasRed" access="field">
+            <property name="value" column="total_compras_cf_otras_red_nb" type="java.math.BigInteger" access="field" />
+        </component>
+        <component name="totalComprasSdCfRed" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.hformularios.HFormularioTotalComprasSdCfRed" access="field">
+            <property name="value" column="total_compras_sdcf_red_nb" type="java.math.BigInteger" access="field" />
+        </component>
+        <component name="determinacionPagoCfRed" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.hformularios.HFormularioDeterminacionPagoCfRed" access="field">
+            <property name="value" column="det_pago_cf_red_nb" type="java.math.BigInteger" access="field" />
+        </component>
+        <component name="determinacionPagoCfIpnRed" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.hformularios.HFormularioDeterminacionPagoCfIpnRed" access="field">
+            <property name="value" column="det_pago_cf_ipn_red_nb" type="java.math.BigInteger" access="field" />
+        </component>
+        <component name="determinacionPagoCfOtrasRed" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.hformularios.HFormularioDeterminacionPagoCfOtrasRed" access="field">
+            <property name="value" column="det_pago_cf_otras_red_nb" type="java.math.BigInteger" access="field" />
+        </component>
+        <component name="determinacionPagoSdCfRed" class="bo.gob.sin.sre.fac.frvcc.misfacturas.model.hformularios.HFormularioDeterminacionPagoSdCfRed" access="field">
+            <property name="value" column="det_pago_sdcf_red_nb" type="java.math.BigInteger" access="field" />
+        </component>
+        <property name="compraIds" column="compras_js" access="field">
+            <type name="json_string">
+                <param name="list_of">bo.gob.sin.sre.fac.frvcc.misfacturas.model.compras.CompraId</param>
+            </type>
+        </property>
+    </class>
+</hibernate-mapping>

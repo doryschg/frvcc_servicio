@@ -1,0 +1,97 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>bo.gob.sin.sre.fac.frvcc</groupId>
+		<artifactId>sre.fac.frvcc</artifactId>
+		<version>0.8.0.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>frvcc.misfacturas.ventas</artifactId>
+	<properties>
+		<java.version>11</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<sql2o.version>1.6.0</sql2o.version>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+
+		</plugins>
+		<resources>
+			<resource>
+				<directory>${basedir}/src/main/java/bo/gob/sin/sre/fac/frvcc/misfacturas/ventas/adapters/secundary/ventas/persistence/hibernate</directory>
+				<targetPath>${basedir}/target/classes/bo/gob/sin/sre/fac/frvcc/misfacturas/ventas/adapters/secundary/ventas/persistence/hibernate</targetPath>
+				<includes>
+					<include>**/*.xml</include>
+				</includes>
+			</resource>
+
+			<resource>
+				<directory>${basedir}/src/main/java/bo/gob/sin/sre/fac/frvcc/misfacturas/ventas/adapters/secundary/archivo/persistence/hibernate</directory>
+				<targetPath>${basedir}/target/classes/bo/gob/sin/sre/fac/frvcc/misfacturas/ventas/adapters/secundary/archivo/persistence/hibernate</targetPath>
+				<includes>
+					<include>**/*.xml</include>
+				</includes>
+			</resource>
+
+			<resource>
+				<directory>${basedir}/src/main/java/bo/gob/sin/sre/fac/frvcc/misfacturas/ventas/adapters/secundary/recepcion/persistence/hibernate</directory>
+				<targetPath>${basedir}/target/classes/bo/gob/sin/sre/fac/frvcc/misfacturas/ventas/adapters/secundary/recepcion/persistence/hibernate</targetPath>
+				<includes>
+					<include>**/*.xml</include>
+				</includes>
+			</resource>
+		</resources>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>bo.gob.sin.sre.fac.frvcc</groupId>
+			<artifactId>frvcc.shared</artifactId>
+			<version>0.8.0.0-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>bo.gob.sin.sre.fac.frvcc</groupId>
+			<artifactId>frvcc.misfacturas</artifactId>
+			<version>0.8.0.0-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>bo.gob.sin.str.caut</groupId>
+			<artifactId>caut.security</artifactId>
+			<version>0.1.0.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>bo.gob.sin.sre.fac.frvcc</groupId>
+			<artifactId>frvcc.shared</artifactId>
+			<version>0.8.0.0-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.sql2o</groupId>
+			<artifactId>sql2o</artifactId>
+			<version>${sql2o.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-dbcp2</artifactId>
+			<version>${commons-dbcp2.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-pool2</artifactId>
+			<version>2.6.0</version>
+		</dependency>
+
+	</dependencies>
+</project>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>sre.fac.frvcc</artifactId>
+        <groupId>bo.gob.sin.sre.fac.frvcc</groupId>
+        <version>0.8.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>frvcc.analytics</artifactId>
+    <version>0.8.0.0-SNAPSHOT</version>
+    <properties>
+        <java.version>11</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>bo.gob.sin.sre.fac.frvcc</groupId>
+            <artifactId>frvcc.shared</artifactId>
+            <version>0.8.0.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+        <resources>
+            <!-- <resource> -->
+            <!-- <directory>./frvcc.recepcion/src/main/java/bo/gob/sin/sre/fac/frvcc/recepcion/archivo/infrastructure/persistence/hibernate</directory> -->
+            <!-- <includes> -->
+            <!-- <include>**/*.xml</include> -->
+            <!-- </includes> -->
+            <!-- </resource> -->
+            <resource>
+                <directory>
+                    ${basedir}/src/main/java/bo/gob/sin/sre/fac/frvcc/analytics/eventos_dominio/adapters/secundary/persistence/hibernate
+                </directory>
+                <targetPath>
+                    ${basedir}/target/classes/bo/gob/sin/sre/fac/frvcc/analytics/eventos_dominio/adapters/secundary/persistence/hibernate
+                </targetPath>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+</project>
